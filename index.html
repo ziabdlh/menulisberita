@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Unsur Teks Berita</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .card {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      .pulse-animation {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+    </style>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full m-0 p-0">
+    <div
+      class="w-full min-h-full gradient-bg flex items-center justify-center p-8"
+    >
+      <main class="w-full max-w-2xl">
+        <div class="card bg-white bg-opacity-95 rounded-2xl p-8 md:p-12">
+          <div class="text-center mb-8">
+            <div class="inline-block bg-purple-100 rounded-full p-4 mb-6">
+              <svg
+                class="w-16 h-16 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h1 id="main-title" class="text-4xl font-bold text-gray-800 mb-3">
+              Tugas Unsur Teks Berita
+            </h1>
+            <p id="subtitle" class="text-xl text-gray-600">
+              Kerjakan soal dengan mengklik tombol di bawah ini
+            </p>
+          </div>
+          <div
+            class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8 rounded-r-lg"
+          >
+            <div class="flex items-start">
+              <svg
+                class="w-6 h-6 text-purple-500 mt-1 mr-3 flex-shrink-0"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <p id="instruction-text" class="text-gray-700 leading-relaxed">
+                Silakan klik tombol di bawah untuk membuka formulir dan
+                mengerjakan soal tentang unsur teks berita. Pastikan Anda
+                mengisi semua pertanyaan dengan teliti.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <a
+              id="form-link"
+              href="https://forms.gle/y3ZLubb2aXDEHrUs7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-lg px-10 py-4 rounded-full hover-scale pulse-animation shadow-lg hover:shadow-xl"
+            >
+              <span id="button-text" class="flex items-center justify-center">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                Kerjakan Soal Sekarang
+              </span>
+            </a>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <div class="flex items-center justify-center text-sm text-gray-500">
+              <svg
+                class="w-5 h-5 mr-2 text-gray-400"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                  clip-rule="evenodd"
+                ></path></svg
+              ><span>Tautan akan membuka di tab baru</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const defaultConfig = {
+        main_title: "Tugas Menulis Teks Berita",
+        subtitle: "Kerjakan soal dengan mengklik tombol di bawah ini",
+        instruction_text:
+          "Silakan klik tombol di bawah untuk membuka formulir dan mengerjakan tugas menulis teks berita. Pastikan Anda mengisi semua pertanyaan dengan teliti.",
+        button_text: "Kerjakan Soal Sekarang",
+        background_color: "#667eea",
+        card_color: "#ffffff",
+        text_color: "#1f2937",
+        button_color: "#7c3aed",
+        accent_color: "#6366f1",
+      };
+
+      async function onConfigChange(config) {
+        const mainTitle = config.main_title || defaultConfig.main_title;
+        const subtitle = config.subtitle || defaultConfig.subtitle;
+        const instructionText =
+          config.instruction_text || defaultConfig.instruction_text;
+        const buttonText = config.button_text || defaultConfig.button_text;
+        const backgroundColor =
+          config.background_color || defaultConfig.background_color;
+        const cardColor = config.card_color || defaultConfig.card_color;
+        const textColor = config.text_color || defaultConfig.text_color;
+        const buttonColor = config.button_color || defaultConfig.button_color;
+        const accentColor = config.accent_color || defaultConfig.accent_color;
+
+        document.getElementById("main-title").textContent = mainTitle;
+        document.getElementById("subtitle").textContent = subtitle;
+        document.getElementById("instruction-text").textContent =
+          instructionText;
+        document.getElementById("button-text").innerHTML = `
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        ${buttonText}
+      `;
+
+        const gradientBg = document.querySelector(".gradient-bg");
+        gradientBg.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${accentColor} 100%)`;
+
+        const card = document.querySelector(".card");
+        card.style.backgroundColor = cardColor;
+
+        const titleElement = document.getElementById("main-title");
+        titleElement.style.color = textColor;
+
+        const formLink = document.getElementById("form-link");
+        formLink.style.background = `linear-gradient(to right, ${buttonColor}, ${accentColor})`;
+      }
+
+      function mapToCapabilities(config) {
+        return {
+          recolorables: [
+            {
+              get: () =>
+                config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                if (window.elementSdk) {
+                  window.elementSdk.setConfig({ background_color: value });
+                }
+              },
+            },
+            {
+              get: () => config.card_color || defaultConfig.card_color,
+              set: (value) => {
+                if (window.elementSdk) {
+                  window.elementSdk.setConfig({ card_color: value });
+                }
+              },
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                if (window.elementSdk) {
+                  window.elementSdk.setConfig({ text_color: value });
+                }
+              },
+            },
+            {
+              get: () => config.button_color || defaultConfig.button_color,
+              set: (value) => {
+                if (window.elementSdk) {
+                  window.elementSdk.setConfig({ button_color: value });
+                }
+              },
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                if (window.elementSdk) {
+                  window.elementSdk.setConfig({ accent_color: value });
+                }
+              },
+            },
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined,
+        };
+      }
+
+      function mapToEditPanelValues(config) {
+        return new Map([
+          ["main_title", config.main_title || defaultConfig.main_title],
+          ["subtitle", config.subtitle || defaultConfig.subtitle],
+          [
+            "instruction_text",
+            config.instruction_text || defaultConfig.instruction_text,
+          ],
+          ["button_text", config.button_text || defaultConfig.button_text],
+        ]);
+      }
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues,
+        });
+      }
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9a3e71afa419a6d7',t:'MTc2NDA0NTM3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
